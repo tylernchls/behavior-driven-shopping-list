@@ -28,4 +28,8 @@ class ShoppingList{
     this.items.push(item);
   }
 
+  removeItem(item) {
+
+  }
+
 }
