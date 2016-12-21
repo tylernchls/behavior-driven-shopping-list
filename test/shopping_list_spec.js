@@ -17,6 +17,11 @@ describe('ShoppingListItem',  () => {
 
   });
 
+  it('should have description property', () => {
+    expect(myShoppingListItem).to.have.property('description');
+
+  });
+
 
 
 
