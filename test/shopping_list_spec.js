@@ -130,7 +130,10 @@ describe('ShoppingList',  () => {
     });
 
     it('should remove item that already exists in the items array', () => {
-
+      var banana = new ShoppingListItem('banana', 'fruit');
+      myShoppingList.addItem(banana);
+      myShoppingList.removeItem(banana);
+      myShoppingList.items.should.not.contain(banana);
 
     });
   });
