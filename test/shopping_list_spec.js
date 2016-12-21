@@ -110,6 +110,11 @@ describe('ShoppingList',  () => {
       myShoppingList.items.should.contain(banana);
 
     });
+
+    it('should have a method `removeItem` that accepts a single ShoppingListItem argument', () => {
+      myShoppingList.removeItem.should.be.a('function');
+
+    });
   });
 
 
