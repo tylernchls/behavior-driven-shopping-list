@@ -24,4 +24,8 @@ class ShoppingList{
     this.items = [];
   }
 
+  addItem(items) {
+
+  }
+
 }

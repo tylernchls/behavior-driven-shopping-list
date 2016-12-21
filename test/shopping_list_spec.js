@@ -88,6 +88,14 @@ describe('ShoppingList',  () => {
 
   });
 
+  describe('methods', function () {
+    it('should have a method named `addItem` that accepts singe ShoppingListItem argument', () => {
+      myShoppingList.addItem.should.be.a('function');
+    });
+  });
+
+
+
 });
 
 
