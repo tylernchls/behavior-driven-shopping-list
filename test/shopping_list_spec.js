@@ -5,7 +5,7 @@ describe('ShoppingListItem',  () => {
   let myShoppingListItem;
 
   beforeEach(() => {
-    myShoppingListItem = new ShoppingListItem('tyler');
+    myShoppingListItem = new ShoppingListItem('nike', 'running shoes');
   });
 
   it('should be a class',  () => {
@@ -31,6 +31,11 @@ describe('ShoppingListItem',  () => {
     let otherShoppingListItem = new ShoppingListItem('iphone', 'smart phone');
     expect(otherShoppingListItem.name).to.be('iphone');
     expect(otherShoppingListItem.description).to.be('smart phone');
+  });
+
+  it('should have new instances of name & description', () => {
+    myShoppingListItem.name.should.be.equal('nike');
+    myShoppingListItem.description.should.be.equal('running shoes');
   });
 
 
