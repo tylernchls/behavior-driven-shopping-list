@@ -134,7 +134,22 @@ describe('ShoppingList',  () => {
       myShoppingList.removeItem(banana);
       myShoppingList.items.should.not.contain(banana);
     });
+
+    it('should remove last item in array if no parameter is passed in', () => {
+      var apple = new ShoppingListItem('apple', 'fruit');
+      var banana = new ShoppingListItem('banana', 'fruit');
+      myShoppingList.addItem(apple);
+      myShoppingList.addItem(banana);
+      myShoppingList.removeItem();
+      console.log(myShoppingList.items);
+      myShoppingList.items.should.not.contain(banana);
+
+    });
+
+
   });
+
+
 
 
 
