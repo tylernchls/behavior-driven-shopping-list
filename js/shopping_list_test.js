@@ -20,8 +20,8 @@ class ShoppingListItem{
 
 
 class ShoppingList{
-  constructor(){
-    this.items = true;
+  constructor(items){
+    this.items = [];
   }
 
 }

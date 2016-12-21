@@ -81,9 +81,12 @@ describe('ShoppingList',  () => {
 
   it('should have items property', () => {
     expect(myShoppingList).to.have.property('items');
-
   });
 
+  it('should have a constructor that initializes `items to be empty array`', () => {
+    myShoppingList.items.should.deep.equal([]);
+
+  });
 
 });
 
