@@ -114,9 +114,14 @@ describe('ShoppingList',  () => {
     it('should only accept items that are instanceOf ShoppingListItem', () => {
       var banana = new ShoppingListItem('banana', 'fruit');
       myShoppingList.addItem(banana);
-      expect(banana instanceof ShoppingListItem).to.be.true;
-
+      expect(banana instanceof ShoppingListItem).to.equal(true);
     });
+
+      it('should throw error if item passed in is not instanceof ShoppingListItem;', () => {
+        expect (() => myShoppingList.addItem('error')).to.throw(Error);
+
+      });
+
 
     it('should have a method `removeItem` that accepts a single ShoppingListItem argument', () => {
       myShoppingList.removeItem.should.be.a('function');
