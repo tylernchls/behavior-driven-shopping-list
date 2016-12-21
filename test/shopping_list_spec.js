@@ -61,9 +61,20 @@ describe('ShoppingListItem',  () => {
       myShoppingListItem.render.should.be.a('function');
     });
 
+     it('should return an html formatted string', () => {
+      myShoppingListItem.render().should.equal(`<li class="completed_false"><span>nike</span> <span>running shoes</span></li>`);
 
+     });
 
+     it('should return an html formatted string', () => {
+      myShoppingListItem.check();
+      myShoppingListItem.render().should.equal(`<li class="completed_true"><span>nike</span> <span>running shoes</span></li>`);
+
+     });
   });
+
+
+
 
 });
 
