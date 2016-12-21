@@ -1,3 +1,3 @@
-// class ShoppingListItem{
+class ShoppingListItem{
 
-// }
+}
