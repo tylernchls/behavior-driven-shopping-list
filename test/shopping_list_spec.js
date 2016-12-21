@@ -38,6 +38,11 @@ describe('ShoppingListItem',  () => {
     myShoppingListItem.description.should.be.equal('running shoes');
   });
 
+  describe('methods', function () {
+    it('should have a method named `check`', () => {
+      myShoppingListItem.check.should.be.a('function');
+    });
+  });
 
 });
 
