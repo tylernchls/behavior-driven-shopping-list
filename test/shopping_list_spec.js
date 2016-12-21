@@ -57,6 +57,10 @@ describe('ShoppingListItem',  () => {
       myShoppingListItem.is_done.should.equal(false);
     });
 
+     it('should have a method named `render`', () => {
+      myShoppingListItem.render.should.be.a('function');
+    });
+
   });
 
 });
