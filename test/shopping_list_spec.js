@@ -99,7 +99,7 @@ describe('ShoppingList',  () => {
 
   });
 
-  describe('methods', function () {
+  describe('addItem', function () {
     it('should have a method named `addItem` that accepts singe ShoppingListItem argument', () => {
       myShoppingList.addItem.should.be.a('function');
     });
@@ -121,12 +121,11 @@ describe('ShoppingList',  () => {
         expect (() => myShoppingList.addItem('error')).to.throw(Error);
 
       });
+  });
 
-
+  describe('removeItem', function () {
     it('should have a method `removeItem` that accepts a single ShoppingListItem argument', () => {
       myShoppingList.removeItem.should.be.a('function');
-
-
     });
 
     it('should remove item that already exists in the items array', () => {
@@ -134,9 +133,14 @@ describe('ShoppingList',  () => {
       myShoppingList.addItem(banana);
       myShoppingList.removeItem(banana);
       myShoppingList.items.should.not.contain(banana);
-
     });
   });
+
+
+
+
+
+
 
 
 
