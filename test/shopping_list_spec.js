@@ -72,12 +72,18 @@ describe('ShoppingList',  () => {
   let myShoppingList;
 
   beforeEach(() => {
-    myShoppingList = new ShoppingListItem('tyler');
+    myShoppingList = new ShoppingList('tyler');
   });
 
   it('should be a class',  () => {
       ShoppingList.should.be.a('function');
   });
+
+  it('should have items property', () => {
+    expect(myShoppingList).to.have.property('items');
+
+  });
+
 
 });
 
