@@ -54,7 +54,7 @@ describe('ShoppingListItem',  () => {
 
     it('should set `is_done` property to `false` when invoked', () => {
       myShoppingListItem.uncheck();
-      myShoppingListItem.uncheck.should.equal(false);
+      myShoppingListItem.is_done.should.equal(false);
     });
 
   });
