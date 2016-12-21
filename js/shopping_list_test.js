@@ -33,7 +33,7 @@ class ShoppingList{
   }
 
   removeItem(item) {
-
+    this.items.splice(0, 1,'item');
   }
 
 }
