@@ -19,6 +19,6 @@ class ShoppingListItem{
 }
 
 
-// class ShoppingList{
+class ShoppingList{
 
-// }
+}
