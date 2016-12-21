@@ -42,6 +42,12 @@ describe('ShoppingListItem',  () => {
     it('should have a method named `check`', () => {
       myShoppingListItem.check.should.be.a('function');
     });
+
+    it('should set `is_done` property to `true` when invoked', () => {
+      myShoppingListItem.check();
+      myShoppingListItem.is_done.should.equal(true);
+    });
+
   });
 
 });
