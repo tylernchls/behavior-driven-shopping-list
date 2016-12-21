@@ -41,6 +41,10 @@ class ShoppingList{
       throw new Error('item does not exist');
     }
   }
+
+  render() {
+
+  }
 }
 
 

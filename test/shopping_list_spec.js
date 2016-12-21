@@ -152,13 +152,13 @@ describe('ShoppingList',  () => {
   });
 
 
+  describe('render', function () {
+    it('should have a method named `render`', () => {
+      myShoppingList.render.should.be.a('function');
+    });
+  });
 
 
-  // describe('render', function () {
-  //   it('should have a method named `render`', () => {
-  //     myShoppingList.render.should.be.a('function');
-  //   });
-  // });
 
 
 
