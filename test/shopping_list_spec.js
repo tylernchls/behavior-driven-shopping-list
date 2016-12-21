@@ -143,11 +143,25 @@ describe('ShoppingList',  () => {
       myShoppingList.removeItem();
       console.log(myShoppingList.items);
       myShoppingList.items.should.not.contain(banana);
-
     });
 
+    it('should throw error if item passed in does not exist in array', () => {
+      expect(() => myShoppingList.removeItem('error')).to.throw(Error);
 
+    });
   });
+
+
+
+
+  // describe('render', function () {
+  //   it('should have a method named `render`', () => {
+  //     myShoppingList.render.should.be.a('function');
+  //   });
+  // });
+
+
+
 
 
 

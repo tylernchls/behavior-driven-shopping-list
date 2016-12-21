@@ -33,7 +33,14 @@ class ShoppingList{
   }
 
   removeItem(item) {
-    this.items.splice(this.items.indexOf(item), 1);
+    if(item === undefined) {
+      this.items.pop();
+    } else if(item instanceof(ShoppingListItem)) {
+      this.items.splice(this.items.indexOf(item), 1);
+    } else {
+      throw new Error('item does not exist');
+    }
   }
-
 }
+
+
