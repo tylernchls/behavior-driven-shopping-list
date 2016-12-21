@@ -28,9 +28,9 @@ describe('ShoppingListItem',  () => {
   });
 
   it('should have a constructor that takes two arguments', () => {
-    // let otherShoppingListItem = new ShoppingListItem('iphone', 'smart phone');
-    // expect(otherShoppingListItem.name).to.be('iphone');
-    // expect(otherShoppingListItem.description).to.be('smart phone');
+    let otherShoppingListItem = new ShoppingListItem('iphone', 'smart phone');
+    expect(otherShoppingListItem.name).to.equal('iphone');
+    expect(otherShoppingListItem.description).to.equal('smart phone');
   });
 
   it('should have new instances of name & description', () => {
@@ -72,7 +72,7 @@ describe('ShoppingList',  () => {
   let myShoppingList;
 
   beforeEach(() => {
-    myShoppingList = new ShoppingList('tyler');
+    myShoppingList = new ShoppingList();
   });
 
   it('should be a class',  () => {
@@ -93,7 +93,7 @@ describe('ShoppingList',  () => {
       myShoppingList.addItem.should.be.a('function');
     });
 
-    it('should invoke `addItem()` and pass that item into `items array`', () => {
+    it('should invoke `addItem()` and pass that item into `items`', () => {
       var banana = new ShoppingListItem('banana', 'fruit');
       myShoppingList.addItem(banana);
       myShoppingList.items.should.contain(banana);
