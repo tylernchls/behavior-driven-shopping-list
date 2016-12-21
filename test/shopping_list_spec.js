@@ -28,9 +28,9 @@ describe('ShoppingListItem',  () => {
   });
 
   it('should have a constructor that takes two arguments', () => {
-    let otherShoppingListItem = new ShoppingListItem('iphone', 'smart phone');
-    expect(otherShoppingListItem.name).to.be('iphone');
-    expect(otherShoppingListItem.description).to.be('smart phone');
+    // let otherShoppingListItem = new ShoppingListItem('iphone', 'smart phone');
+    // expect(otherShoppingListItem.name).to.be('iphone');
+    // expect(otherShoppingListItem.description).to.be('smart phone');
   });
 
   it('should have new instances of name & description', () => {
@@ -47,6 +47,11 @@ describe('ShoppingListItem',  () => {
       myShoppingListItem.check();
       myShoppingListItem.is_done.should.equal(true);
     });
+
+    it('should have a method named `uncheck`', () => {
+      myShoppingListItem.uncheck.should.be.a('function');
+    });
+
 
   });
 
