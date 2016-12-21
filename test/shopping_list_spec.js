@@ -1,8 +1,27 @@
 const expect =  chai.expect;
 chai.should();
 
-describe('ShoppingListItem', function () {
-  it('should be a class', function () {
-    ShoppingListItem.should.be.a('function');
+describe('ShoppingListItem',  () => {
+  let myShoppingListItem;
+
+  beforeEach(() => {
+    myShoppingListItem = new ShoppingListItem('tyler');
   });
+
+  it('should be a class',  () => {
+      ShoppingListItem.should.be.a('function');
+  });
+
+  it('should have name property', () => {
+    expect(myShoppingListItem).to.have.property('name');
+
+  });
+
+
+
+
 });
+
+
+
+
