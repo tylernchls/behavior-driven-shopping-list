@@ -24,8 +24,8 @@ class ShoppingList{
     this.items = [];
   }
 
-  addItem(items) {
-
+  addItem(item) {
+    this.items.push(item);
   }
 
 }

@@ -92,6 +92,13 @@ describe('ShoppingList',  () => {
     it('should have a method named `addItem` that accepts singe ShoppingListItem argument', () => {
       myShoppingList.addItem.should.be.a('function');
     });
+
+    it('should invoke `addItem()` and add add item object to items array', () => {
+      var banana = new ShoppingListItem('banana', 'fruit');
+      myShoppingList.addItem(banana);
+      myShoppingList.items.should.contain(banana);
+
+    });
   });
 
 
