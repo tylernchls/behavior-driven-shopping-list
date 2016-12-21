@@ -25,7 +25,9 @@ class ShoppingList{
   }
 
   addItem(item) {
-    this.items.push(item);
+    if(item instanceof ShoppingListItem) {
+      this.items.push(item);
+    }
   }
 
   removeItem(item) {

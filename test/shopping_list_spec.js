@@ -104,15 +104,28 @@ describe('ShoppingList',  () => {
       myShoppingList.addItem.should.be.a('function');
     });
 
-    it('should invoke `addItem()` and pass that item into `items`', () => {
+    it('should invoke `addItem()` and pass that item into `items array`', () => {
       var banana = new ShoppingListItem('banana', 'fruit');
       myShoppingList.addItem(banana);
       myShoppingList.items.should.contain(banana);
 
     });
 
+    it('should only accept items that are instanceOf ShoppingListItem', () => {
+      var banana = new ShoppingListItem('banana', 'fruit');
+      myShoppingList.addItem(banana);
+      expect(banana instanceof ShoppingListItem).to.be.true;
+
+    });
+
     it('should have a method `removeItem` that accepts a single ShoppingListItem argument', () => {
       myShoppingList.removeItem.should.be.a('function');
+
+
+    });
+
+    it('should remove item that already exists in the items array', () => {
+
 
     });
   });
