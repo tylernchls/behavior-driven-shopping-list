@@ -93,7 +93,7 @@ describe('ShoppingList',  () => {
       myShoppingList.addItem.should.be.a('function');
     });
 
-    it('should invoke `addItem()` and add add item object to items array', () => {
+    it('should invoke `addItem()` and pass that item into `items array`', () => {
       var banana = new ShoppingListItem('banana', 'fruit');
       myShoppingList.addItem(banana);
       myShoppingList.items.should.contain(banana);
