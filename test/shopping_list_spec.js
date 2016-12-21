@@ -52,6 +52,10 @@ describe('ShoppingListItem',  () => {
       myShoppingListItem.uncheck.should.be.a('function');
     });
 
+    it('should set `is_done` property to `false` when invoked', () => {
+      myShoppingListItem.uncheck();
+      myShoppingListItem.uncheck.should.equal(false);
+    });
 
   });
 
