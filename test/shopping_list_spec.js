@@ -61,10 +61,25 @@ describe('ShoppingListItem',  () => {
       myShoppingListItem.render.should.be.a('function');
     });
 
+
+
   });
 
 });
 
+
+describe('ShoppingList',  () => {
+  let myShoppingList;
+
+  beforeEach(() => {
+    myShoppingList = new ShoppingListItem('tyler');
+  });
+
+  it('should be a class',  () => {
+      ShoppingList.should.be.a('function');
+  });
+
+});
 
 
 
