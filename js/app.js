@@ -7,7 +7,18 @@ function add_to_shopping_list(){
   var new_shopping_list_item = new ShoppingListItem(title,description);
   myList.addItem(new_shopping_list_item);
   document.getElementById('content').innerHTML = myList.render();
+}
 
-  console.log(myList.render());
+// function itemDeleteBtnClick(itemIdx)
+
+function changeCheckedStatus(idx, checkbox) {
+
+   if(checkbox.checked) {
+    myList.getItemById(idx).check();
+    console.log(myList.getItemById(idx));
+   } else {
+    myList.getItemById(idx).uncheck();
+    console.log(myList.getItemById(idx));
+   }
 }
 

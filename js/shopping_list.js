@@ -30,6 +30,15 @@ class ShoppingList{
     });
       return `<ul>` + renderedItems.join(' ') + `</ul>`;
   }
+
+  getItemById(itemId) {
+    var itemArr = this.items;
+    for(var i = 0; i < itemArr.length; i++) {
+      if(itemArr[i]._idx === itemId) {
+        return itemArr[i];
+      }
+    }
+  }
 }
 
 
