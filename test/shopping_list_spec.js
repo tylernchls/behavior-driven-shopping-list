@@ -141,22 +141,32 @@ describe('ShoppingList',  () => {
       myShoppingList.addItem(apple);
       myShoppingList.addItem(banana);
       myShoppingList.removeItem();
-      console.log(myShoppingList.items);
       myShoppingList.items.should.not.contain(banana);
     });
 
     it('should throw error if item passed in does not exist in array', () => {
       expect(() => myShoppingList.removeItem('error')).to.throw(Error);
-
     });
   });
+
 
 
   describe('render', function () {
     it('should have a method named `render`', () => {
       myShoppingList.render.should.be.a('function');
     });
+
+    it('should concatenate the result on it item in the array', () => {
+      var apple = new ShoppingListItem('apple', 'fruit');
+      var banana = new ShoppingListItem('banana', 'fruit');
+      myShoppingList.addItem(apple);
+      myShoppingList.addItem(banana);
+      myShoppingList.render().should.equal(`<ul><li class="completed_false"><span>apple</span> <span>fruit</span></li>,<li class="completed_false"><span>banana</span> <span>fruit</span></li></ul>`);
+    });
   });
+
+
+
 
 
 

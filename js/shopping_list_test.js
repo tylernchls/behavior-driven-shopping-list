@@ -43,7 +43,12 @@ class ShoppingList{
   }
 
   render() {
+    var renderedItems = [];
 
+    this.items.forEach(function(x){
+      renderedItems.push(x.render());
+    });
+      return `<ul>` + renderedItems + `</ul>`;
   }
 }
 
