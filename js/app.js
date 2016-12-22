@@ -22,3 +22,10 @@ function changeCheckedStatus(idx, checkbox) {
    }
 }
 
+function removeItemButtonClicked(idx){
+  myList.removeItem(myList.getItemById(idx));
+  document.getElementById('content').innerHTML = myList.render();
+  console.log(myList);
+
+
+}

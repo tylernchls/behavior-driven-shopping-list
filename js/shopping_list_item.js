@@ -17,6 +17,10 @@ class ShoppingListItem{
   }
 
   render() {
+    // var btn = document.createElement('button');
+    // var x = document.createTextNode('x');
+    // btn.appendChild(x);
+
     // var li = documenent.createElement('li');
     // //add span
     // // add another span
@@ -31,6 +35,6 @@ class ShoppingListItem{
     // // add deleteBtn to li
 
 
-    return `<li class="completed_${this.is_done}" id="${this._idx}"><span>${this.name}</span> <span>${this.description}</span><input type="checkbox" onchange="changeCheckedStatus('${this._idx}', this)"></li>`;
+    return `<li class="completed_${this.is_done}" id="${this._idx}"><span>${this.name}</span> <span>${this.description}</span><input type="checkbox" onchange="changeCheckedStatus('${this._idx}', this)"> <button onclick="removeItemButtonClicked('${this._idx}')">x</button></li>`;
   }
 }
