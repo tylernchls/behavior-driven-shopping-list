@@ -28,7 +28,7 @@ class ShoppingList{
     this.items.forEach(function(x){
       renderedItems.push(x.render());
     });
-      return `<ul>` + renderedItems + `</ul>`;
+      return `<ul>` + renderedItems.join(' ') + `</ul>`;
   }
 }
 
